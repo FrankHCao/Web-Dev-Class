@@ -1,0 +1,23 @@
+#square
+{
+    width:200px;
+    height:200px;
+    background:red;
+    animation-name:box;
+    animation-duration:10s;
+    transition: width 2s, height 4s;
+}
+
+@keyframes box
+{
+    0% {background-color:red;}
+    25% {background-color:yellow;}
+    50% {background-color:paleturquoise;}
+    100% {background-color: blue;}
+}
+
+#square:hover
+{
+    width:500px;
+    height:500px;
+}
