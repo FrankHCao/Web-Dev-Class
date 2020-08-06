@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <style>
+            * {box-sizing: border-box;}
+
+            body,html
+            {
+                margin:5px;
+                height:100%;
+            }
+
+            .tabs
+            {
+                background-color:brown;
+                color:burlywood;
+                float:left;
+                cursor:pointer;
+                padding:14px 16px;
+                font-size:20px;
+                width:33%;
+            }
+
+            .tabs:hover
+            {
+                background-color:crimson;
+            }
+
+            .content
+            {
+                color:white;
+                display:none;
+                padding:100px 20px;
+                height:100%;
+            }
+
+            #Home{background-color:olive;}
+            #Contact{background-color:burlywood;}
+            #About{background-color:blue;}
+
+        </style>
+    </head>
+    <body>
+        <botton class ="tabs" id ="openFirst" onclick ="loadTab('Home',this,'olive');"> Home</botton>
+        <botton class ="tabs" onclick ="loadTab('Contact',this,'burlywood');"> Contact</botton>
+        <botton class ="tabs" onclick ="loadTab('About',this,'burlywood');"> About</botton>
+
+        <div id="home" class="content">
+            <h2> Home page</h2>
+        </div>
+        <div id="contact" class="content">
+            <h2> Contact page</h2>
+        </div>
+        <div id="about" class="content">
+            <h2> About page</h2>
+        </div>
+
+        <script>
+            function loadTab();
+            {
+                var i, tabcontent, tabs;
+
+                tabcontent=document.getElementById("tabcontent");
+                for(i=0;i<tabcontent.length;i++)
+                {
+                    tabcontent[i].style.display ="none";
+                }
+
+                tabs = document.getElementById("tabs");
+                    for(i=0;i<tabs.length;i++)
+                    {
+                        tabs[i].style.backgroundColor="";
+                    }
+                document.getElementById("openFirst").click();
+            }
+        </script>
+    </body>
+
+</html>
